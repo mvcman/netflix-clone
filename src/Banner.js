@@ -31,7 +31,9 @@ function Banner() {
                 backgroundRepeat: 'no-repeat',
             }}
         >
-            <div className="banner__contents">
+            <div className="banner__contents"></div>
+
+            <div className="banner__fadeBottom">
                 <h1 className="banner__title">
                     {movie?.title || movie?.name || movie?.original_name}
                 </h1>
@@ -39,12 +41,10 @@ function Banner() {
                     <button className="banner__button">Play</button>
                     <button className="banner__button">My List</button>
                 </div>
-                <h1 className="banner__description">
+                <p className="banner__description">
                     {truncate(movie?.overview, 150)}
-                </h1>
+                </p>
             </div>
-
-            <div className="banner__fadeBottom" />
         </div>
     );
 }

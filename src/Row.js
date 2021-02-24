@@ -24,11 +24,13 @@ function Row({ title, fetchUrl, isLargeRow = false }) {
                             <img
                                 className={
                                     isLargeRow
-                                        ? 'row__posterLarge'
+                                        ? 'row__poster row__posterLarge'
                                         : 'row__poster'
                                 }
                                 key={i}
-                                src={baseUrl + m.backdrop_path}
+                                src={`${baseUrl}${
+                                    isLargeRow ? m.poster_path : m.backdrop_path
+                                }`}
                                 alt={m.name}
                             />
                         ),

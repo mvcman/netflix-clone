@@ -4,12 +4,14 @@ import Nav from './Nav';
 import Banner from './Banner';
 import Row from './Row';
 import request from './request';
+// import ImageBack from './ImageBack';
 
 function HomeScreen() {
     return (
         <div className="homeScreen">
             <Nav />
             <Banner />
+            {/* <ImageBack /> */}
             <Row
                 title="NETFLIX ORIGINALS"
                 fetchUrl={request.fetchNetflixOriginals}
